@@ -9,6 +9,8 @@ def getbdInit():
     engineLocal = sq.create_engine("mysql+pymysql://admin:Admin2020*@localhost:3307/bdsample?charset=utf8mb4")
     return engineLocal
 
+#### conection driver+usuario+password@host/nombre base de datos/
+
 
 def getbdInitAws():
     engineAWS = sq.create_engine("mysql+pymysql://adminDemov1:Basedatos2023.@db-demo-v1.c6efsfp6ae0y.us-east-1.rds.amazonaws.com:3306/dbDemov1?charset=utf8mb4")
@@ -16,8 +18,8 @@ def getbdInitAws():
     return connect
 
 
-
-
+""" 
+opcional con libreria desfasada
 def getAwsbd():
     region = 'us-east-1'
 
@@ -45,7 +47,7 @@ def getAwsbd():
         print('Error al conectar a la base de datos:', e)
         return 0
     
-conAws=getAwsbd()
+conAws=getAwsbd() """
 conAwsv2=getbdInitAws()
 conbd=getbdInit()
 
